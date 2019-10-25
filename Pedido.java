@@ -68,13 +68,13 @@ public class Pedido
      * (ver enunciado)
      */
     public String toString() {
-        String auxFecha = "FECHA PEDIDO: " + fecha + "\nDATOS CLIENTE\n";
-        String auxPedido = "\n**** Artículos en el pedido ****\n";
-        String auxPagar = "\n**** A pagar ****\n";
+        String auxFecha = "FECHA PEDIDO: " + fecha + "\nDATOS DEL CLIENTE";
+        String auxPedido = "\n\n**** Artículos en el pedido ****\n\n";
+        String auxPagar = "\n\n**** A pagar ****\n\n";
         String auxAntesIva = String.format("%20s %8.2f€", "IMPORTE SIN IVA:", getImporteAntesIva()); 
-        String auxIva = String.format("%20s %8.2f€", "IVA:", getIva()); 
-        String auxTotal = String.format("%20s %8.2f€", "IMPORTE TOTAL:", getImporteTotal()); 
-        return auxFecha + cliente + auxPedido + linea1 + linea2 + auxPagar + auxAntesIva + auxIva + auxTotal;
+        String auxIva = String.format("\n%20s %8.2f€", "IVA:", getIva()); 
+        String auxTotal = String.format("\n%20s %8.2f€", "IMPORTE TOTAL:", getImporteTotal()); 
+        return auxFecha + cliente + auxPedido + linea1 + "\n" + linea2 + auxPagar + auxAntesIva + auxIva + auxTotal;
     }
 
     /**
