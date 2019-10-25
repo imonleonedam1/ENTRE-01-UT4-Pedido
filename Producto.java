@@ -1,6 +1,7 @@
 /**
  *  
  * Modela un producto. Todo producto tiene un nombre y un  precio unidad 
+ * @autor Ibai Monleón Elía
  */
 public class Producto
 {
@@ -32,8 +33,9 @@ public class Producto
     /**
      * obtiene un nuevo producto copia idéntica del actual
      */
-    public         obtenerCopia() {
-         
+    public Producto obtenerCopia() {
+         Producto copiaProducto = new Producto(nombre, precio);
+         return copiaProducto;
     }
 
     /**
@@ -41,7 +43,8 @@ public class Producto
      * (ver enunciado)
      */
     public String toString() {
-        
+        String aux = String.format("%30s | %8.2f€ unidad", nombre, precio);
+        return aux;
     }
 
 }

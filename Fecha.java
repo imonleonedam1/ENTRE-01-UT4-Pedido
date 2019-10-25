@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 /**
- *  Representa una fecha 
+ *  Representa una fecha @autor Ibai Monleón Elía
  */
 public class Fecha
 {
@@ -39,18 +39,14 @@ public class Fecha
      * recibida como parámetro
      */
     public boolean antesQue(Fecha fecha) {
-        return this.date.isBefore(LocalDate.of(fecha.getYear(),
-                        fecha.getMes(), fecha.getDia()));
-
+        return this.date.isBefore(LocalDate.of(fecha.getYear(), fecha.getMes(), fecha.getDia()));
     }
 
     /**
      * representación textual de la fecha
      */
     public String toString() {
-        return date.getDayOfMonth() + "/" + date.getMonthValue() +  
-        "/" + date.getYear();
-
+        return date.getDayOfMonth() + "/" + date.getMonthValue() +  "/" + date.getYear();
     }
 
     /**

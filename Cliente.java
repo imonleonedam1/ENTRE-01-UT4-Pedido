@@ -1,7 +1,6 @@
-
-
 /**
  *  Representa a un cliente que hace un pedido 
+ *  @autor Ibai Monleón Elía
  */
 public class Cliente
 {
@@ -52,15 +51,18 @@ public class Cliente
      * representación textual del cliente
      */
     public String toString() {
-         
-          
+       String auxNombre = String.format("%10s %-10s", "NOMBRE:", nombre);
+       String auxDireccion = String.format("%10s %-10s", "DIRECCION:", direccion);
+       String auxCiudad = String.format("%10s %-10s", "CIUDAD:",ciudad);
+       String auxProvincia = String.format("%10s %-10s", "PROVINCIA:", provincia);
+       return "\n" + auxNombre + "\n" + auxDireccion + "\n" + auxCiudad + "\n" + auxProvincia;
     }
     
     /**
      * 
      */
     public void print() {
-        System.out.println(this.toString());
+        this.toString();
     }
 
 }
